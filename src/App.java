@@ -27,5 +27,23 @@ public class App {
         // Short Circuit
         int divisor = 0;
         if (divisor != 0 && 5 / divisor > 1) System.out.println("Uh oh");
+        
+        // Arrays
+        int b, n, m, u = 0; // Multi-declaration
+        b = 0;
+        n = 0;
+        m = 0; 
+        int[] arr = {n, u, m, b}; // Merely copies, since n, u, m, b are primitives
+        n = 5;
+        System.out.println(arr[0]); // n is unchanged
+        arr[0] = 5;
+        System.out.println(arr[0]);
+        System.out.println("The array in question has " + arr.length + " items contained.");
+
+        System.out.println(addYaBoi("I play chess.")); // Nested method call
+    }
+    // Functions = Methods
+    public static String addYaBoi(String str) {
+        return str + " -ya boi";
     }
 }
