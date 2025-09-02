@@ -1,5 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
+
+        fizBuzz(100);
+
         // Different Data Types
         String myName = "Andy"; // camelCase
         int x = 57;
@@ -42,8 +45,24 @@ public class App {
 
         System.out.println(addYaBoi("I play chess.")); // Nested method call
     }
+
     // Functions = Methods
     public static String addYaBoi(String str) {
         return str + " -ya boi";
+    }
+
+    // FizzBuzz
+    public static void fizBuzz(int upperBound) {
+        for (int k = 1; k <= upperBound; k++) {
+            
+            String output = "";
+
+            if (k % 3 == 0) output += "Fizz";
+            if (k % 5 == 0) output += "Buzz";
+
+            if (output == "") output = String.valueOf(k);
+            
+            System.out.println(output);
+        }
     }
 }
